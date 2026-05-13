@@ -36,8 +36,6 @@ Clone the repository and compile Mercury6:
 ```bash
 git clone https://github.com/dizz-astro/3-body-problem-simulation.git
 
-cd mercury
-
 make build
 ```
 
