@@ -1,1 +1,0 @@
-# 3-body-problem-simulation
