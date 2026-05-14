@@ -55,6 +55,8 @@ This generates all required `.in` configuration files.
 
 The default parameters are already tuned for a relatively stable system, so you can immediately test the simulation pipeline without accidentally vaporizing your stars.
 
+(It's a cool simulation, pinkie promise:3)
+
 ---
 
 # 🛠 Configuration
@@ -225,22 +227,34 @@ Install Python dependencies:
 python3 -m pip install numpy pandas matplotlib pillow astropy astroquery
 ```
 
-Generate plots and CSV data:
+Generate 3D or 2D plots and CSV data, respectively:
 
 ```bash
-python3 plot.py
+python3 3Dplot.py
+```
+
+```bash
+python3 2Dplot.py
 ```
 
 Create the animation:
 
 ```bash
-python3 animation.py
+python3 3Danimation.py
+```
+
+```bash
+python3 2Danimation.py
 ```
 
 If everything worked, you should now have:
 
 ```text
-3body_simulation.gif
+3D_3body_plot.png and 3D_3body_simulation.gif
+```
+and/or
+```text
+2D_3body_plot.png and 2D_3body_simulation.gif
 ```
 
 which contains several stars making increasingly questionable life decisions.
@@ -251,11 +265,13 @@ which contains several stars making increasingly questionable life decisions.
 
 |          File          |         Description       |
 
-|        `*.aei`         |  Orbital element outputs  |
-|        `*.csv`         | Processed coordinate data |
-|    `3_body_img.png`    |   Static trajectory plot  |
-| `3body_simulation.gif` | Final animated simulation |
-|       `info.out`       |  Collision/ejection logs  |
+|         `*.aei`          |  Orbital element outputs  |
+|         `*.csv`          | Processed coordinate data |
+|    `3D_3body_plot.png`   |   Static trajectory plot  |
+|    `2D_3body_plot.png`   |      Same thing in 2D     |
+| `3D_3body_animation.gif` | Final animated simulation |
+| `2D_3body_animation.gif` |      Same thing in 2D     |
+|        `info.out`        |  Collision/ejection logs  |
 
 ---
 
@@ -280,9 +296,12 @@ Manually remove:
 ```text
 ALPHA.csv
 BETA.csv
-3_body_img.png
-3body_simulation.gif
-visualization/              (folder)
+3D_3body_plot.png
+2D_3body_plot.png
+3D_3body_animation.gif
+2D_3body_animation.gif
+2D_visualization/              (folder)
+3D_visualization/              (folder)
 ```
 
 Then rerun the simulation pipeline.
@@ -300,7 +319,7 @@ Try changing:
 
 Some systems become surprisingly stable.
 Others become astrophysical horror movies.
-And that’s the utter beauty of astronomy.
+And that’s the utter beauty of astronomy, physics and pure mathematics.
 
 ---
 
